@@ -1,0 +1,21 @@
+.comm{
+    margin-top: 200px;
+    text-align: center;
+    font-size: 40px;
+    
+}
+.days{
+    text-align: center;
+
+}
+.tc{
+    margin-top: 245px; 
+
+}
+body{
+    background-image:url(https://4kwallpapers.com/images/walls/thumbs_3t/25105.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+
+}

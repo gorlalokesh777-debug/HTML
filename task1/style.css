@@ -1,0 +1,17 @@
+.VAMPIRE    
+{   
+    display:flex;
+    align-items:center;
+    justify-items:center;
+    
+    
+    /* padding-left: 10px; */
+    color: red;
+    height: 700px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://people.com/thmb/qqN5GYj5y1wJ-d-RKiQswE3vLKg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/vam6_ka_v2-2000-22a959297692412fadc40129ebb4214b.jpg');
+}
+
+
