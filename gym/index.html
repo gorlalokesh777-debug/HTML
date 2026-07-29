@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reyna Cole — Strength &amp; Hypertrophy Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-mark"><span class="bolt"></span><span>REYNA COLE</span></a>
+    <nav class="links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#program">Program</a>
+      <a href="#results">Results</a>
+      <a href="#book">Book</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="#book" class="nav-cta">Book a Session</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+ 
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Certified Personal Trainer · Hypertrophy Specialist</div>
+        <h1 class="hero-name display">BUILD THE<br><span class="accent">STRONGEST</span><br>VERSION OF YOU</h1>
+        <p class="tagline">I'm Reyna Cole. I coach lifters through structured hypertrophy programming, precise movement mechanics, and the kind of consistency that actually shows up in the mirror — not just the spreadsheet.</p>
+        <div class="cert-row">
+          <span class="cert"><strong>NASM</strong>-CPT</span>
+          <span class="cert"><strong>CSCS</strong> Strength & Conditioning</span>
+          <span class="cert"><strong>Precision Nutrition</strong> L1</span>
+          <span class="cert">9 yrs coaching</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#book" class="btn btn-primary">Book a Session →</a>
+          <a href="#program" class="btn btn-ghost">View the Program</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-head"><span>COACH_PROFILE.dat</span><span class="live">TRAINING NOW</span></div>
+        <div class="stat-row"><span>Clients coached</span><span>240+</span></div>
+        <div class="stat-row"><span>Avg. client lean gain</span><span>+6.2 kg / 16wk</span></div>
+        <div class="stat-row"><span>Program adherence rate</span><span>91%</span></div>
+        <div class="stat-row"><span>Specialty</span><span>Hypertrophy</span></div>
+        <div class="stat-row"><span>Sessions booked this mo.</span><span>38</span></div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ================= PROGRAM ================= -->
+  <section id="program">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">The Split</div>
+        <h2 class="display">6-Day Hypertrophy Program</h2>
+        <p>A six-day training week built for muscle growth: compound lifts for load, isolation work for shape, one full antagonist-superset day to spike density, and a single full rest day to let everything actually grow.</p>
+      </div>
+ 
+      <div class="split-strip">
+        <div class="split-cell"><div class="d">DAY 01</div><div class="t">Chest &amp; Triceps</div></div>
+        <div class="split-cell"><div class="d">DAY 02</div><div class="t">Back &amp; Biceps</div></div>
+        <div class="split-cell"><div class="d">DAY 03</div><div class="t">Legs &amp; Core</div></div>
+        <div class="split-cell"><div class="d">DAY 04</div><div class="t">Shoulders &amp; Abs</div></div>
+        <div class="split-cell"><div class="d">DAY 05</div><div class="t">Upper Synergy (Supersets)</div></div>
+        <div class="split-cell"><div class="d">DAY 06</div><div class="t">Posterior Chain &amp; Glutes</div></div>
+        <div class="split-cell"><div class="d">DAY 07</div><div class="t">Rest Day</div></div>
+      </div>
+ 
+      <div class="program-layout">
+        <div class="day-tabs" id="dayTabs">
+          <button class="day-tab active" data-day="1"><span class="num">DAY 01</span><span class="lbl">Chest & Triceps</span></button>
+          <button class="day-tab" data-day="2"><span class="num">DAY 02</span><span class="lbl">Back & Biceps</span></button>
+          <button class="day-tab" data-day="3"><span class="num">DAY 03</span><span class="lbl">Legs & Core</span></button>
+          <button class="day-tab" data-day="4"><span class="num">DAY 04</span><span class="lbl">Shoulders & Abs</span></button>
+          <button class="day-tab" data-day="5"><span class="num">DAY 05</span><span class="lbl">Upper Synergy</span></button>
+          <button class="day-tab" data-day="6"><span class="num">DAY 06</span><span class="lbl">Posterior & Glutes</span></button>
+          <button class="day-tab" data-day="7"><span class="num">DAY 07</span><span class="lbl">Rest Day</span></button>
+        </div>
+ 
+        <div id="panels"></div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ================= RESULTS / SLIDER ================= -->
+  <section id="results">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Client Results</div>
+        <h2 class="display">Transformations, Tracked</h2>
+        <p>Drag the divider — this is a composite illustration of a typical 16-week hypertrophy transformation under this program, not a specific client photo.</p>
+      </div>
+      <div class="compare-wrap">
+        <div>
+          <div class="compare" id="compare">
+            <div class="layer before">
+              <svg viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="34" r="20" fill="#2A3037"/>
+                <rect x="82" y="52" width="36" height="16" rx="4" fill="#2A3037"/>
+                <path d="M60 70 h80 a10 10 0 0 1 10 10 v70 a10 10 0 0 1 -10 10 h-80 a10 10 0 0 1 -10 -10 v-70 a10 10 0 0 1 10 -10 z" fill="#20262C"/>
+                <rect x="34" y="76" width="24" height="88" rx="10" fill="#1C2126"/>
+                <rect x="142" y="76" width="24" height="88" rx="10" fill="#1C2126"/>
+                <rect x="72" y="162" width="26" height="90" rx="10" fill="#20262C"/>
+                <rect x="102" y="162" width="26" height="90" rx="10" fill="#20262C"/>
+                <rect x="72" y="254" width="26" height="70" rx="8" fill="#1C2126"/>
+                <rect x="102" y="254" width="26" height="70" rx="8" fill="#1C2126"/>
+              </svg>
+            </div>
+            <div class="layer after">
+              <svg viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="32" r="19" fill="#2A3037"/>
+                <rect x="80" y="49" width="40" height="14" rx="4" fill="#2A3037"/>
+                <path d="M52 66 h96 a14 14 0 0 1 14 14 v18 a70 70 0 0 1 -14 42 l-6 8 a10 10 0 0 1 -8 4 h-68 a10 10 0 0 1 -8 -4 l-6 -8 a70 70 0 0 1 -14 -42 v-18 a14 14 0 0 1 14 -14 z" fill="var(--flame)" opacity="0.9"/>
+                <rect x="24" y="68" width="26" height="82" rx="12" fill="var(--flame)" opacity="0.75"/>
+                <rect x="150" y="68" width="26" height="82" rx="12" fill="var(--flame)" opacity="0.75"/>
+                <rect x="68" y="150" width="30" height="94" rx="12" fill="#20262C"/>
+                <rect x="102" y="150" width="30" height="94" rx="12" fill="#20262C"/>
+                <rect x="68" y="248" width="30" height="72" rx="9" fill="var(--flame)" opacity="0.55"/>
+                <rect x="102" y="248" width="30" height="72" rx="9" fill="var(--flame)" opacity="0.55"/>
+              </svg>
+            </div>
+            <div class="compare-handle" id="compareHandle"></div>
+            <span class="compare-tag before">WEEK 0</span>
+            <span class="compare-tag after">WEEK 16</span>
+            <input type="range" min="0" max="100" value="50" id="compareRange" aria-label="Drag to compare before and after">
+          </div>
+          <div class="compare-caption">Illustrative composite — drag to compare</div>
+        </div>
+        <div class="compare-copy">
+          <h3>What 16 weeks of structured hypertrophy training looks like</h3>
+          <p>Progressive overload on the big compounds, isolation volume dialed to recoverable levels, and protein-forward nutrition coaching. No shortcuts — just programming that compounds week over week.</p>
+          <p>Every client gets a logging system, a check-in cadence, and form review on the four lifts that move the needle most for their goal.</p>
+          <div class="compare-stats">
+            <div class="cstat"><b>+6.2kg</b><span>Avg. lean mass gained</span></div>
+            <div class="cstat"><b>16wk</b><span>Program length</span></div>
+            <div class="cstat"><b>91%</b><span>Client adherence</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ================= BOOK ================= -->
+  <section id="book">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Get Started</div>
+        <h2 class="display">Book Your First Session</h2>
+        <p>Every new client starts with a 30-minute assessment: movement screen, goal-setting, and a walkthrough of the split that fits your schedule.</p>
+      </div>
+      <div class="book-grid">
+        <div class="book-info">
+          <h3>What to expect</h3>
+          <p>We'll build your program around the equipment you actually have access to, your current strength levels, and how many days a week you can realistically train.</p>
+          <div class="book-list">
+            <div class="row"><span class="ico">01</span><span>Movement &amp; mobility assessment to flag any limitations before we load anything heavy.</span></div>
+            <div class="row"><span class="ico">02</span><span>A custom split — starting from this 5-day hypertrophy template — scaled to your schedule.</span></div>
+            <div class="row"><span class="ico">03</span><span>A printable log so every session is tracked, from working weight to how each set felt.</span></div>
+            <div class="row"><span class="ico">04</span><span>Weekly check-ins with load and rep adjustments based on your recovery.</span></div>
+          </div>
+        </div>
+        <form class="book-form" id="bookForm">
+          <div class="field-row">
+            <div class="field">
+              <label for="bf-name">Name</label>
+              <input type="text" id="bf-name" required maxlength="80">
+            </div>
+            <div class="field">
+              <label for="bf-email">Email</label>
+              <input type="email" id="bf-email" required maxlength="120">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="bf-goal">Primary Goal</label>
+              <select id="bf-goal">
+                <option>Build muscle</option>
+                <option>Lose fat</option>
+                <option>Get stronger</option>
+                <option>General fitness</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bf-days">Preferred Days / Week</label>
+              <select id="bf-days">
+                <option>3 days</option>
+                <option selected>5 days</option>
+                <option>6 days</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="bf-message">Anything I should know?</label>
+            <textarea id="bf-message" rows="4" maxlength="600" placeholder="Injuries, equipment access, schedule constraints..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-flame" style="width:100%;justify-content:center;">Request Consultation →</button>
+          <span id="bookStatus"></span>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+ 
+<footer>© 2026 REYNA COLE COACHING — programming built for progressive overload, not guesswork.</footer>
+ 
+<!-- Printable log sheet, only visible when printing -->
+<div class="print-only" id="printLog">
+  <h2 id="printDayTitle">Workout Log</h2>
+  <div id="printDayMeta"></div>
+  <table>
+    <thead><tr><th>Exercise</th><th>Sets x Reps</th><th>Rest</th><th>Weight</th><th>Notes</th></tr></thead>
+    <tbody id="printTableBody"></tbody>
+  </table>
+</div>
+ 
+<script>
+  // ---------- Mobile nav ----------
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+ 
+  // ---------- Active nav on scroll ----------
+  const navSections = document.querySelectorAll('main section[id]');
+  const navAnchors = document.querySelectorAll('nav.links a');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px' });
+  navSections.forEach(s => io.observe(s));
+ 
+  // ---------- Exercise icon library (simple motion-path glyphs) ----------
+  const icons = {
+    press: '<svg viewBox="0 0 40 40"><path d="M10 28 L10 16 M30 28 L30 16" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/><rect x="6" y="10" width="28" height="6" rx="3" fill="var(--cyan)"/><path d="M20 30 L20 20" stroke="var(--flame)" stroke-width="2" stroke-dasharray="3 3"/><path d="M15 24 L20 19 L25 24" stroke="var(--flame)" stroke-width="2" fill="none"/></svg>',
+    fly: '<svg viewBox="0 0 40 40"><circle cx="20" cy="14" r="4" fill="var(--cyan)"/><path d="M8 26 Q20 10 32 26" stroke="var(--flame)" stroke-width="2" fill="none" stroke-dasharray="3 3"/><path d="M8 26 L8 32 M32 26 L32 32" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/></svg>',
+    pushdown: '<svg viewBox="0 0 40 40"><rect x="17" y="6" width="6" height="10" fill="var(--cyan)"/><path d="M20 16 L20 30" stroke="var(--flame)" stroke-width="2" stroke-dasharray="3 3"/><path d="M15 24 L20 30 L25 24" stroke="var(--flame)" stroke-width="2" fill="none"/><path d="M12 32 h16" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/></svg>',
+    pull: '<svg viewBox="0 0 40 40"><rect x="10" y="6" width="20" height="4" fill="var(--cyan)"/><path d="M20 10 L20 24" stroke="var(--flame)" stroke-width="2" stroke-dasharray="3 3"/><path d="M14 18 L20 24 L26 18" stroke="var(--flame)" stroke-width="2" fill="none"/><path d="M14 30 h12" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/></svg>',
+    row: '<svg viewBox="0 0 40 40"><path d="M6 30 L34 30" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/><path d="M14 30 L26 16" stroke="var(--flame)" stroke-width="2" stroke-dasharray="3 3"/><path d="M18 18 L26 16 L24 24" stroke="var(--flame)" stroke-width="2" fill="none"/></svg>',
+    curl: '<svg viewBox="0 0 40 40"><circle cx="12" cy="30" r="3" fill="var(--cyan)"/><path d="M12 30 Q12 16 24 12" stroke="var(--flame)" stroke-width="2" fill="none" stroke-dasharray="3 3"/><rect x="20" y="6" width="10" height="4" rx="2" fill="var(--cyan)" transform="rotate(-25 25 8)"/></svg>',
+    squat: '<svg viewBox="0 0 40 40"><circle cx="20" cy="8" r="4" fill="var(--cyan)"/><path d="M20 12 L20 22" stroke="var(--cyan)" stroke-width="3"/><path d="M12 34 L20 22 L28 34" stroke="var(--flame)" stroke-width="2" fill="none" stroke-dasharray="3 3"/><path d="M8 34 h10 M22 34 h10" stroke="var(--cyan)" stroke-width="3" stroke-linecap="round"/></svg>',
+    hinge: '<svg viewBox="0 0 40 40"><circle cx="14" cy="8" r="4" fill="var(--cyan)"/><path d="M14 12 Q10 22 22 26" stroke="var(--cyan)" stroke-width="3" fill="none"/><path d="M22 26 L30 34" stroke="var(--flame)" stroke-width="2" stroke-dasharray="3 3"/><rect x="6" y="30" width="14" height="4" rx="2" fill="var(--cyan)"/></svg>',
+    calf: '<svg viewBox="0 0 40 40"><path d="M14 8 L14 26" stroke="var(--cyan)" stroke-width="3"/><path d="M14 26 Q14 32 22 34" stroke="var(--flame)" stroke-width="2" fill="none" stroke-dasharray="3 3"/><rect x="10" y="34" width="16" height="3" rx="1.5" fill="var(--cyan)"/></svg>',
+    core: '<svg viewBox="0 0 40 40"><rect x="12" y="8" width="16" height="24" rx="4" fill="none" stroke="var(--cyan)" stroke-width="2"/><path d="M14 14 h12 M14 20 h12 M14 26 h12" stroke="var(--flame)" stroke-width="2" stroke-dasharray="2 3"/></svg>',
+    mobility: '<svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="12" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-dasharray="4 4"/><path d="M20 10 A10 10 0 0 1 30 20" stroke="var(--flame)" stroke-width="2" fill="none"/><path d="M27 16 L30 20 L26 21" stroke="var(--flame)" stroke-width="2" fill="none"/></svg>'
+  };
+ 
+  // ---------- Program data ----------
+  const days = {
+    1:{
+      title:'Chest &amp; Triceps', focus:'Heavy horizontal & incline pressing for chest thickness and width, finished with tricep isolation for arm size.',
+      muscles:['chest','triceps','shoulders'],
+      exercises:[
+        {name:'Incline Dumbbell Press', target:'Upper Chest', sets:'4', reps:'8–12', rest:'90s', icon:'press'},
+        {name:'Flat Barbell Bench Press', target:'Chest', sets:'4', reps:'8–10', rest:'120s', icon:'press'},
+        {name:'Cable Flyes', target:'Chest (Stretch)', sets:'3', reps:'12–15', rest:'60s', icon:'fly'},
+        {name:'Weighted Dips', target:'Lower Chest / Triceps', sets:'3', reps:'8–12', rest:'90s', icon:'press'},
+        {name:'Tricep Rope Pushdowns', target:'Triceps', sets:'4', reps:'12–15', rest:'60s', icon:'pushdown'},
+        {name:'Overhead Tricep Extension', target:'Triceps (Long Head)', sets:'3', reps:'12–15', rest:'60s', icon:'pushdown'}
+      ]
+    },
+    2:{
+      title:'Back &amp; Biceps', focus:'Vertical and horizontal pulling to build width and thickness, then bicep isolation for full arm development.',
+      muscles:['back','biceps'],
+      exercises:[
+        {name:'Lat Pulldowns', target:'Lats (Width)', sets:'4', reps:'10–12', rest:'90s', icon:'pull'},
+        {name:'Barbell Rows', target:'Mid Back', sets:'4', reps:'8–10', rest:'120s', icon:'row'},
+        {name:'Seated Cable Rows', target:'Mid Back / Rear Delts', sets:'3', reps:'10–12', rest:'90s', icon:'row'},
+        {name:'Straight-Arm Pulldown', target:'Lats (Stretch)', sets:'3', reps:'12–15', rest:'60s', icon:'pull'},
+        {name:'Barbell Curls', target:'Biceps', sets:'4', reps:'8–12', rest:'90s', icon:'curl'},
+        {name:'Hammer Curls', target:'Biceps / Forearms', sets:'3', reps:'10–12', rest:'60s', icon:'curl'}
+      ]
+    },
+    3:{
+      title:'Legs &amp; Core', focus:'Squat and hinge patterns for total lower-body size and strength, with direct calf and core finishers.',
+      muscles:['quads','hamstrings','glutes','calves','core'],
+      exercises:[
+        {name:'Barbell Squats', target:'Quads / Glutes', sets:'5', reps:'6–10', rest:'150s', icon:'squat'},
+        {name:'Romanian Deadlifts', target:'Hamstrings / Glutes', sets:'4', reps:'8–10', rest:'120s', icon:'hinge'},
+        {name:'Leg Press', target:'Quads', sets:'3', reps:'10–12', rest:'90s', icon:'squat'},
+        {name:'Walking Lunges', target:'Quads / Glutes', sets:'3', reps:'12/leg', rest:'90s', icon:'squat'},
+        {name:'Standing Calf Raises', target:'Calves', sets:'4', reps:'15–20', rest:'60s', icon:'calf'},
+        {name:'Hanging Leg Raises', target:'Core', sets:'3', reps:'12–15', rest:'60s', icon:'core'}
+      ]
+    },
+    4:{
+      title:'Shoulders &amp; Abs', focus:'Direct deltoid work from all three heads plus weighted core training — the finishing detail work that rounds out the physique between big pressing and pulling days.',
+      muscles:['shoulders','core'],
+      exercises:[
+        {name:'Seated Overhead Press', target:'Front / Side Delts', sets:'4', reps:'8–10', rest:'120s', icon:'press'},
+        {name:'Lateral Raises', target:'Side Delts', sets:'4', reps:'12–15', rest:'60s', icon:'fly'},
+        {name:'Rear Delt Flyes', target:'Rear Delts', sets:'3', reps:'12–15', rest:'60s', icon:'fly'},
+        {name:'Front Raises', target:'Front Delts', sets:'3', reps:'12–15', rest:'60s', icon:'fly'},
+        {name:'Cable Crunches', target:'Abs', sets:'4', reps:'15–20', rest:'60s', icon:'core'},
+        {name:'Weighted Plank Hold', target:'Core (Anti-Extension)', sets:'3', reps:'45–60s', rest:'45s', icon:'core'}
+      ]
+    },
+    5:{
+      title:'Upper Body &ldquo;Double Muscle&rdquo; Synergy', focus:'Antagonist supersets pair opposing muscle groups back-to-back — no added rest between the two, one full rest after the pair — to spike density and cut session time.',
+      muscles:['chest','back','biceps','triceps'],
+      superset:true,
+      pairs:[
+        {label:'Superset A', rest:'90s after pair', items:[
+          {name:'Flat Chest Press', target:'Chest', sets:'4', reps:'10', icon:'press'},
+          {name:'Bent-Over Row', target:'Back', sets:'4', reps:'10', icon:'row'}
+        ]},
+        {label:'Superset B', rest:'90s after pair', items:[
+          {name:'Incline Dumbbell Press', target:'Upper Chest', sets:'3', reps:'10–12', icon:'press'},
+          {name:'Seated Cable Row', target:'Mid Back', sets:'3', reps:'10–12', icon:'row'}
+        ]},
+        {label:'Superset C', rest:'75s after pair', items:[
+          {name:'Barbell Bicep Curl', target:'Biceps', sets:'4', reps:'10–12', icon:'curl'},
+          {name:'Overhead Tricep Extension', target:'Triceps', sets:'4', reps:'10–12', icon:'pushdown'}
+        ]},
+        {label:'Superset D', rest:'60s after pair', items:[
+          {name:'Hammer Curl', target:'Biceps / Forearms', sets:'3', reps:'12–15', icon:'curl'},
+          {name:'Rope Pushdown', target:'Triceps', sets:'3', reps:'12–15', icon:'pushdown'}
+        ]}
+      ]
+    },
+    6:{
+      title:'Posterior Chain &amp; Glutes', focus:'Hip-hinge dominant training to build the hamstrings and glutes that squats alone don\u2019t fully reach, plus a calf finisher.',
+      muscles:['hamstrings','glutes','calves'],
+      exercises:[
+        {name:'Conventional Deadlifts', target:'Hamstrings / Glutes / Back', sets:'4', reps:'6–8', rest:'150s', icon:'hinge'},
+        {name:'Bulgarian Split Squats', target:'Glutes / Quads', sets:'3', reps:'10/leg', rest:'90s', icon:'squat'},
+        {name:'Barbell Hip Thrusts', target:'Glutes', sets:'4', reps:'10–12', rest:'90s', icon:'hinge'},
+        {name:'Lying Leg Curls', target:'Hamstrings', sets:'3', reps:'12–15', rest:'60s', icon:'hinge'},
+        {name:'Seated Calf Raises', target:'Calves (Soleus)', sets:'4', reps:'15–20', rest:'60s', icon:'calf'},
+        {name:'Cable Glute Kickbacks', target:'Glutes', sets:'3', reps:'15/leg', rest:'60s', icon:'hinge'}
+      ]
+    },
+    7:{
+      title:'Rest Day', focus:'One full day off from resistance training. Light optional movement is fine, but the job today is recovery: sleep, protein, and hydration so the six days of work can actually turn into muscle.',
+      muscles:[],
+      exercises:[
+        {name:'Foam Rolling — Full Body', target:'Fascia / Recovery', sets:'1', reps:'10 min', rest:'—', icon:'mobility'},
+        {name:'Dynamic Hip Openers', target:'Hips', sets:'3', reps:'10 ea.', rest:'—', icon:'mobility'},
+        {name:'Band Pull-Aparts', target:'Rear Delts / Upper Back', sets:'3', reps:'15', rest:'30s', icon:'row'},
+        {name:'Cat-Cow + T-Spine Rotations', target:'Spine Mobility', sets:'3', reps:'8 ea.', rest:'—', icon:'mobility'},
+        {name:'Easy Walk (optional)', target:'Cardiovascular', sets:'1', reps:'20–30 min', rest:'—', icon:'mobility'},
+        {name:'Static Stretch Flow', target:'Full Body', sets:'1', reps:'10 min', rest:'—', icon:'mobility'}
+      ]
+    }
+  };
+ 
+  const muscleColors = { chest:'chest', triceps:'triceps', back:'back', biceps:'biceps', quads:'quads',
+    hamstrings:'hamstrings', glutes:'glutes', calves:'calves', core:'core', shoulders:'shoulders' };
+ 
+  function frontFigure(){
+    return `<svg viewBox="0 0 200 420" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="100" cy="24" rx="15" ry="17" style="fill:#2A3037;stroke:none;"/>
+      <path d="M90 38 L110 38 L107 54 L93 54 Z" style="fill:#2A3037;stroke:none;"/>
+      <path d="M66 68 C46 68 28 82 24 104 C22 114 27 122 36 120 C40 106 48 90 64 80 Z" class="muscle" data-group="shoulders"/>
+      <path d="M134 68 C154 68 172 82 176 104 C178 114 173 122 164 120 C160 106 152 90 136 80 Z" class="muscle" data-group="shoulders"/>
+      <path d="M66 66 C50 66 40 78 40 96 C40 112 52 124 68 124 C80 124 88 112 88 98 C88 82 80 66 66 66 Z" class="muscle" data-group="chest"/>
+      <path d="M134 66 C150 66 160 78 160 96 C160 112 148 124 132 124 C120 124 112 112 112 98 C112 82 120 66 134 66 Z" class="muscle" data-group="chest"/>
+      <path d="M30 100 C24 114 22 132 24 152 C25 164 30 174 38 176 C46 174 48 162 47 148 C46 130 44 112 40 100 Z" class="muscle" data-group="biceps"/>
+      <path d="M170 100 C176 114 178 132 176 152 C175 164 170 174 162 176 C154 174 152 162 153 148 C154 130 156 112 160 100 Z" class="muscle" data-group="biceps"/>
+      <path d="M26 176 C24 190 24 204 28 216 C32 222 40 222 42 214 C44 200 44 186 40 174 Z" style="fill:#20262C;stroke:var(--line-bright);"/>
+      <path d="M174 176 C176 190 176 204 172 216 C168 222 160 222 158 214 C156 200 156 186 160 174 Z" style="fill:#20262C;stroke:var(--line-bright);"/>
+      <path d="M78 128 C72 128 68 134 68 142 L68 208 C68 218 76 228 88 228 L112 228 C124 228 132 218 132 208 L132 142 C132 134 128 128 122 128 Z" class="muscle" data-group="core"/>
+      <line x1="100" y1="132" x2="100" y2="224" stroke="var(--bg)" stroke-width="2"/>
+      <line x1="70" y1="152" x2="130" y2="152" stroke="var(--bg)" stroke-width="2"/>
+      <line x1="70" y1="176" x2="130" y2="176" stroke="var(--bg)" stroke-width="2"/>
+      <line x1="70" y1="200" x2="130" y2="200" stroke="var(--bg)" stroke-width="2"/>
+      <path d="M74 228 L126 228 L122 250 L78 250 Z" style="fill:#20262C;stroke:var(--line-bright);"/>
+      <path d="M78 250 C68 250 62 264 61 284 C60 304 62 320 67 332 C70 339 80 341 86 336 C89 320 90 300 89 280 C88 266 84 254 78 250 Z" class="muscle" data-group="quads"/>
+      <path d="M122 250 C132 250 138 264 139 284 C140 304 138 320 133 332 C130 339 120 341 114 336 C111 320 110 300 111 280 C112 266 116 254 122 250 Z" class="muscle" data-group="quads"/>
+      <path d="M69 338 C65 348 64 362 66 376 C67 386 74 392 80 390 C85 386 86 372 85 358 C84 348 82 340 78 336 Z" class="muscle" data-group="calves"/>
+      <path d="M131 338 C135 348 136 362 134 376 C133 386 126 392 120 390 C115 386 114 372 115 358 C116 348 118 340 122 336 Z" class="muscle" data-group="calves"/>
+    </svg>`;
+  }
+  function backFigure(){
+    return `<svg viewBox="0 0 200 420" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="100" cy="24" rx="15" ry="17" style="fill:#2A3037;stroke:none;"/>
+      <path d="M90 38 L110 38 L107 54 L93 54 Z" style="fill:#2A3037;stroke:none;"/>
+      <path d="M66 68 C46 68 28 82 24 104 C22 114 27 122 36 120 C40 106 48 90 64 80 Z" class="muscle" data-group="shoulders"/>
+      <path d="M134 68 C154 68 172 82 176 104 C178 114 173 122 164 120 C160 106 152 90 136 80 Z" class="muscle" data-group="shoulders"/>
+      <path d="M80 60 L120 60 L112 96 L88 96 Z" class="muscle" data-group="back"/>
+      <path d="M62 94 C50 114 46 144 54 172 C58 180 68 180 72 170 C68 144 68 116 76 96 Z" class="muscle" data-group="back"/>
+      <path d="M138 94 C150 114 154 144 146 172 C142 180 132 180 128 170 C132 144 132 116 124 96 Z" class="muscle" data-group="back"/>
+      <path d="M30 100 C24 114 22 132 24 152 C25 164 30 174 38 176 C46 174 48 162 47 148 C46 130 44 112 40 100 Z" class="muscle" data-group="triceps"/>
+      <path d="M170 100 C176 114 178 132 176 152 C175 164 170 174 162 176 C154 174 152 162 153 148 C154 130 156 112 160 100 Z" class="muscle" data-group="triceps"/>
+      <path d="M26 176 C24 190 24 204 28 216 C32 222 40 222 42 214 C44 200 44 186 40 174 Z" style="fill:#20262C;stroke:var(--line-bright);"/>
+      <path d="M174 176 C176 190 176 204 172 216 C168 222 160 222 158 214 C156 200 156 186 160 174 Z" style="fill:#20262C;stroke:var(--line-bright);"/>
+      <path d="M76 170 L124 170 L122 228 L78 228 Z" style="fill:#20262C;stroke:var(--line-bright);"/>
+      <path d="M72 228 C64 228 60 236 61 246 C62 258 72 266 100 266 C128 266 138 258 139 246 C140 236 136 228 128 228 Z" class="muscle" data-group="glutes"/>
+      <path d="M78 266 C68 266 62 280 61 298 C60 316 62 330 67 340 C70 346 80 348 86 344 C89 330 90 312 89 294 C88 280 84 270 78 266 Z" class="muscle" data-group="hamstrings"/>
+      <path d="M122 266 C132 266 138 280 139 298 C140 316 138 330 133 340 C130 346 120 348 114 344 C111 330 110 312 111 294 C112 280 116 270 122 266 Z" class="muscle" data-group="hamstrings"/>
+      <path d="M69 348 C65 358 64 372 66 386 C67 396 74 402 80 400 C85 396 86 382 85 368 C84 358 82 350 78 346 Z" class="muscle" data-group="calves"/>
+      <path d="M131 348 C135 358 136 372 134 386 C133 396 126 402 120 400 C115 396 114 382 115 368 C116 358 118 350 122 346 Z" class="muscle" data-group="calves"/>
+    </svg>`;
+  }
+ 
+  function exCardHTML(ex){
+    return `<div class="ex-card">
+      <div class="ex-top">
+        <div>
+          <div class="ex-name">${ex.name}</div>
+          <div class="ex-target">${ex.target}</div>
+        </div>
+        <div class="ex-icon">${icons[ex.icon] || icons.press}</div>
+      </div>
+      <div class="ex-meta">
+        <span class="meta-chip"><strong>${ex.sets}</strong> sets</span>
+        <span class="meta-chip"><strong>${ex.reps}</strong> reps</span>
+        <span class="meta-chip">Rest <strong>${ex.rest}</strong></span>
+      </div>
+    </div>`;
+  }
+ 
+  function buildPanels(){
+    const container = document.getElementById('panels');
+    let html = '';
+    Object.keys(days).forEach(id => {
+      const d = days[id];
+      let body = '';
+      if(d.superset){
+        body = d.pairs.map(p => `
+          <div class="super-pair">
+            <span class="super-badge">${p.label} · ${p.rest}</span>
+            ${p.items.map((it,idx) => exCardHTML(it) + (idx===0 ? '<div class="super-divider">↓ superset with ↓</div>' : '')).join('')}
+          </div>`).join('');
+        body = `<div class="exercise-grid" style="grid-template-columns:1fr;">${body}</div>`;
+      } else {
+        body = `<div class="exercise-grid">${d.exercises.map(exCardHTML).join('')}</div>`;
+      }
+      html += `<div class="program-panel${id==='1' ? ' active':''}" data-panel="${id}">
+        <div class="panel-top">
+          <div class="panel-intro">
+            <div class="eyebrow">Day 0${id}</div>
+            <h3>${d.title}</h3>
+            <p class="focus-line">${d.focus}</p>
+            <div class="legend">
+              ${d.muscles.length ? d.muscles.map(m => `<span class="legend-item"><span class="legend-dot"></span>${m}</span>`).join('') : '<span class="legend-item">Low-intensity — no targeted overload</span>'}
+            </div>
+          </div>
+          <div class="muscle-map">
+            <div><div class="figure-map front">${frontFigure()}</div><div class="figure-label">Front</div></div>
+            <div><div class="figure-map back">${backFigure()}</div><div class="figure-label">Back</div></div>
+          </div>
+        </div>
+        ${body}
+        <div class="panel-footer-cta">
+          <button class="btn btn-ghost print-btn" data-day="${id}">🖨 Generate Printable Log</button>
+          <a href="#book" class="btn btn-primary">Train This Split →</a>
+          <span class="print-status"></span>
+        </div>
+      </div>`;
+    });
+    container.innerHTML = html;
+    applyMuscleHighlight('1');
+    document.querySelectorAll('.print-btn').forEach(btn => {
+      btn.addEventListener('click', () => generatePrintLog(btn.dataset.day));
+    });
+  }
+ 
+  function applyMuscleHighlight(dayId){
+    const panel = document.querySelector(`.program-panel[data-panel="${dayId}"]`);
+    if(!panel) return;
+    const targets = days[dayId].muscles;
+    panel.querySelectorAll('.muscle').forEach(el => {
+      const group = el.getAttribute('data-group');
+      if(group && group.indexOf('__') === 0) return;
+      el.classList.toggle('active', targets.includes(group));
+    });
+  }
+ 
+  // ---------- Day tab switching ----------
+  document.addEventListener('click', e => {
+    const tab = e.target.closest('.day-tab');
+    if(!tab) return;
+    document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const id = tab.dataset.day;
+    document.querySelectorAll('.program-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === id));
+    applyMuscleHighlight(id);
+  });
+ 
+  buildPanels();
+ 
+  // ---------- Printable workout log ----------
+  function generatePrintLog(dayId){
+    const d = days[dayId];
+    document.getElementById('printDayTitle').textContent = 'Workout Log — Day 0' + dayId + ': ' + d.title.replace(/&amp;/g,'&').replace(/&ldquo;|&rdquo;/g,'"');
+    document.getElementById('printDayMeta').textContent = 'Client: ______________________     Date: ______________________';
+    const rows = [];
+    if(d.superset){
+      d.pairs.forEach(p => {
+        p.items.forEach(it => rows.push(`<tr><td>${it.name} <em>(${p.label})</em></td><td>${it.sets} x ${it.reps}</td><td>${p.rest}</td><td></td><td></td></tr>`));
+      });
+    } else {
+      d.exercises.forEach(ex => rows.push(`<tr><td>${ex.name}</td><td>${ex.sets} x ${ex.reps}</td><td>${ex.rest}</td><td></td><td></td></tr>`));
+    }
+    document.getElementById('printTableBody').innerHTML = rows.join('');
+    window.print();
+  }
+ 
+  // ---------- Transformation slider ----------
+  const compareRange = document.getElementById('compareRange');
+  const compare = document.getElementById('compare');
+  compareRange.addEventListener('input', () => {
+    compare.style.setProperty('--split', compareRange.value + '%');
+  });
+ 
+  // ---------- Booking form ----------
+  const bookForm = document.getElementById('bookForm');
+  const bookStatus = document.getElementById('bookStatus');
+  bookForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('bf-name').value.trim();
+    if(!name){ return; }
+    bookStatus.textContent = `Thanks, ${name} — request received. I'll follow up by email within 24 hours to confirm a time.`;
+    bookStatus.className = 'ok';
+    bookForm.reset();
+  });
+</script>
+</body>
+</html>
+ 
+
