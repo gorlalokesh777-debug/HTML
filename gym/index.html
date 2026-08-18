@@ -21,6 +21,7 @@
     </nav>
     <div style="display:flex;align-items:center;gap:12px;">
       <a href="#book" class="nav-cta">Book a Session</a>
+      <button id="themeBtn" aria-label="Toggle light and dark mode" title="Toggle light / dark mode">🌙</button>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
     </div>
   </div>
@@ -33,7 +34,7 @@
       <div>
         <div class="eyebrow">Certified Personal Trainer · Hypertrophy Specialist</div>
         <h1 class="hero-name display">BUILD THE<br><span class="accent">STRONGEST</span><br>VERSION OF YOU</h1>
-        <p class="tagline">I'm Reyna Cole. I coach lifters through structured hypertrophy programming, precise movement mechanics, and the kind of consistency that actually shows up in the mirror — not just the spreadsheet.</p>
+        <p class="tagline">I'm Lokesh Cole. I coach lifters through structured hypertrophy programming, precise movement mechanics, and the kind of consistency that actually shows up in the mirror — not just the spreadsheet.</p>
         <div class="cert-row">
           <span class="cert"><strong>NASM</strong>-CPT</span>
           <span class="cert"><strong>CSCS</strong> Strength & Conditioning</span>
@@ -103,29 +104,57 @@
         <div>
           <div class="compare" id="compare">
             <div class="layer before">
-              <svg viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="34" r="20" fill="#2A3037"/>
-                <rect x="82" y="52" width="36" height="16" rx="4" fill="#2A3037"/>
-                <path d="M60 70 h80 a10 10 0 0 1 10 10 v70 a10 10 0 0 1 -10 10 h-80 a10 10 0 0 1 -10 -10 v-70 a10 10 0 0 1 10 -10 z" fill="#20262C"/>
-                <rect x="34" y="76" width="24" height="88" rx="10" fill="#1C2126"/>
-                <rect x="142" y="76" width="24" height="88" rx="10" fill="#1C2126"/>
-                <rect x="72" y="162" width="26" height="90" rx="10" fill="#20262C"/>
-                <rect x="102" y="162" width="26" height="90" rx="10" fill="#20262C"/>
-                <rect x="72" y="254" width="26" height="70" rx="8" fill="#1C2126"/>
-                <rect x="102" y="254" width="26" height="70" rx="8" fill="#1C2126"/>
+              <svg viewBox="0 0 220 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="beforeSkin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2E343B"/>
+                    <stop offset="100%" stop-color="#20262C"/>
+                  </linearGradient>
+                </defs>
+                <rect x="92" y="0" width="36" height="28" rx="10" fill="url(#beforeSkin)"/>
+                <path d="M34 50 C50 34 90 26 110 26 C130 26 170 34 186 50 C190 70 188 92 182 110 C176 128 168 146 162 168 C156 190 160 212 168 232 C150 246 130 252 110 252 C90 252 70 246 52 232 C60 212 64 190 58 168 C52 146 44 128 38 110 C32 92 30 70 34 50 Z" fill="url(#beforeSkin)"/>
+                <ellipse cx="112" cy="150" rx="46" ry="52" fill="#262C32" opacity="0.55"/>
+                <path d="M70 232 C70 246 86 254 110 254 C134 254 150 246 150 232 L150 250 C150 266 132 274 110 276 C88 274 70 266 70 250 Z" fill="#14171B"/>
               </svg>
             </div>
             <div class="layer after">
-              <svg viewBox="0 0 200 340" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="32" r="19" fill="#2A3037"/>
-                <rect x="80" y="49" width="40" height="14" rx="4" fill="#2A3037"/>
-                <path d="M52 66 h96 a14 14 0 0 1 14 14 v18 a70 70 0 0 1 -14 42 l-6 8 a10 10 0 0 1 -8 4 h-68 a10 10 0 0 1 -8 -4 l-6 -8 a70 70 0 0 1 -14 -42 v-18 a14 14 0 0 1 14 -14 z" fill="var(--flame)" opacity="0.9"/>
-                <rect x="24" y="68" width="26" height="82" rx="12" fill="var(--flame)" opacity="0.75"/>
-                <rect x="150" y="68" width="26" height="82" rx="12" fill="var(--flame)" opacity="0.75"/>
-                <rect x="68" y="150" width="30" height="94" rx="12" fill="#20262C"/>
-                <rect x="102" y="150" width="30" height="94" rx="12" fill="#20262C"/>
-                <rect x="68" y="248" width="30" height="72" rx="9" fill="var(--flame)" opacity="0.55"/>
-                <rect x="102" y="248" width="30" height="72" rx="9" fill="var(--flame)" opacity="0.55"/>
+              <svg viewBox="0 0 220 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="afterMuscle" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#FF8B5C"/>
+                    <stop offset="55%" stop-color="var(--flame)"/>
+                    <stop offset="100%" stop-color="#B23A17"/>
+                  </linearGradient>
+                  <linearGradient id="afterSkin" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2A3037"/>
+                    <stop offset="100%" stop-color="#1A1F24"/>
+                  </linearGradient>
+                </defs>
+                <rect x="92" y="0" width="36" height="28" rx="10" fill="url(#afterSkin)"/>
+                <path d="M40 46 C60 30 90 22 110 22 C130 22 160 30 180 46 L180 60 C150 44 130 40 110 40 C90 40 70 44 40 60 Z" fill="url(#afterMuscle)" opacity="0.55"/>
+                <ellipse cx="36" cy="58" rx="26" ry="30" fill="url(#afterMuscle)"/>
+                <ellipse cx="184" cy="58" rx="26" ry="30" fill="url(#afterMuscle)"/>
+                <path d="M64 46 C50 46 40 58 40 74 C40 88 52 96 68 92 C78 88 84 76 82 62 C80 52 74 46 64 46 Z" fill="url(#afterMuscle)"/>
+                <path d="M156 46 C170 46 180 58 180 74 C180 88 168 96 152 92 C142 88 136 76 138 62 C140 52 146 46 156 46 Z" fill="url(#afterMuscle)"/>
+                <path d="M66 92 C54 96 44 106 46 122 C48 136 62 142 78 136 C90 130 94 116 90 102 C86 92 76 88 66 92 Z" fill="url(#afterMuscle)" opacity="0.92"/>
+                <path d="M154 92 C166 96 176 106 174 122 C172 136 158 142 142 136 C130 130 126 116 130 102 C134 92 144 88 154 92 Z" fill="url(#afterMuscle)" opacity="0.92"/>
+                <line x1="110" y1="46" x2="110" y2="138" stroke="#160C06" stroke-width="3"/>
+                <line x1="50" y1="120" x2="64" y2="128" stroke="#160C06" stroke-width="2"/>
+                <line x1="46" y1="132" x2="60" y2="140" stroke="#160C06" stroke-width="2"/>
+                <line x1="170" y1="120" x2="156" y2="128" stroke="#160C06" stroke-width="2"/>
+                <line x1="174" y1="132" x2="160" y2="140" stroke="#160C06" stroke-width="2"/>
+                <path d="M62 140 C54 156 52 178 58 198 L74 194 C70 176 70 158 76 144 Z" fill="url(#afterMuscle)" opacity="0.75"/>
+                <path d="M158 140 C166 156 168 178 162 198 L146 194 C150 176 150 158 144 144 Z" fill="url(#afterMuscle)" opacity="0.75"/>
+                <rect x="86" y="142" width="20" height="26" rx="6" fill="url(#afterMuscle)"/>
+                <rect x="114" y="142" width="20" height="26" rx="6" fill="url(#afterMuscle)"/>
+                <rect x="86" y="172" width="20" height="26" rx="6" fill="url(#afterMuscle)"/>
+                <rect x="114" y="172" width="20" height="26" rx="6" fill="url(#afterMuscle)"/>
+                <rect x="88" y="202" width="18" height="24" rx="6" fill="url(#afterMuscle)"/>
+                <rect x="114" y="202" width="18" height="24" rx="6" fill="url(#afterMuscle)"/>
+                <line x1="110" y1="140" x2="110" y2="228" stroke="#160C06" stroke-width="2"/>
+                <path d="M8 66 C2 82 2 104 10 122 C14 130 24 130 26 120 C22 102 22 84 18 68 Z" fill="url(#afterMuscle)"/>
+                <path d="M212 66 C218 82 218 104 210 122 C206 130 196 130 194 120 C198 102 198 84 202 68 Z" fill="url(#afterMuscle)"/>
+                <path d="M76 228 C76 244 84 254 110 254 C136 254 144 244 144 228 L144 250 C144 268 130 276 110 278 C90 276 76 268 76 250 Z" fill="#14171B"/>
               </svg>
             </div>
             <div class="compare-handle" id="compareHandle"></div>
@@ -223,6 +252,27 @@
 </div>
  
 <script>
+  // ---------- Theme toggle: dark / light ----------
+  const themeBtn = document.getElementById('themeBtn');
+  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  let currentTheme = prefersLight ? 'light' : 'dark';
+ 
+  function applyTheme(mode){
+    if(mode === 'light'){
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeBtn.textContent = '☀️';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      themeBtn.textContent = '🌙';
+    }
+    currentTheme = mode;
+  }
+  applyTheme(currentTheme);
+ 
+  themeBtn.addEventListener('click', () => {
+    applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+  });
+ 
   // ---------- Mobile nav ----------
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
@@ -529,5 +579,3 @@
 </script>
 </body>
 </html>
- 
-

@@ -12,7 +12,31 @@
     --text:#F1F5F7;
     --text-muted:#94A0AA;
     --text-faint:#5A646D;
+    --nav-bg:rgba(10,12,14,0.86);
+    --tag-bg:rgba(20,23,27,0.85);
+    --grid-fade:rgba(0,240,255,0.04);
+    --scheme:dark;
   }
+  [data-theme="light"]{
+    --bg:#F2F4F6;
+    --surface:#FFFFFF;
+    --surface-2:#EAEDF0;
+    --line:#DBE1E6;
+    --line-bright:#C1C9D0;
+    --cyan:#0092A6;
+    --cyan-dim:#00707F;
+    --cyan-soft:rgba(0,146,166,0.12);
+    --flame:#E14D24;
+    --flame-soft:rgba(225,77,36,0.16);
+    --text:#12161A;
+    --text-muted:#525C66;
+    --text-faint:#818B94;
+    --nav-bg:rgba(242,244,246,0.86);
+    --tag-bg:rgba(255,255,255,0.88);
+    --grid-fade:rgba(0,146,166,0.05);
+    --scheme:light;
+  }
+  body{transition:background-color .35s ease, color .35s ease;}
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
@@ -41,7 +65,7 @@
   /* ---------- NAV ---------- */
   header.site-nav{
     position:fixed;top:0;left:0;right:0;z-index:200;
-    background:rgba(10,12,14,0.86);backdrop-filter:blur(10px);
+    background:var(--nav-bg);backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
   .nav-inner{max-width:1180px;margin:0 auto;padding:0 28px;height:68px;
@@ -61,6 +85,14 @@
     border:1px solid var(--cyan-dim);color:var(--cyan);padding:9px 16px;border-radius:2px;
     text-transform:uppercase;letter-spacing:.06em;transition:.2s;}
   .nav-cta:hover{background:var(--cyan);color:#04181A;box-shadow:0 0 18px var(--cyan-soft);}
+  #themeBtn{
+    font-family:'JetBrains Mono',monospace;font-size:16px;line-height:1;
+    border:1px solid var(--line-bright);background:var(--surface);color:var(--text);
+    width:38px;height:38px;border-radius:2px;cursor:pointer;display:flex;align-items:center;
+    justify-content:center;transition:border-color .2s, color .2s, transform .2s;
+  }
+  #themeBtn:hover{border-color:var(--cyan);color:var(--cyan);}
+  #themeBtn:active{transform:scale(0.92);}
   .nav-toggle{display:none;background:transparent;border:1px solid var(--line);color:var(--text);
     width:38px;height:34px;border-radius:2px;cursor:pointer;font-size:18px;}
   @media (max-width:860px){
@@ -108,7 +140,7 @@
   .hero-card{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:0;overflow:hidden;
     position:relative;}
   .hero-card::before{content:"";position:absolute;inset:0;pointer-events:none;
-    background:linear-gradient(180deg,transparent,rgba(0,240,255,0.04));}
+    background:linear-gradient(180deg,transparent,var(--grid-fade));}
   .hero-card-head{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;
     border-bottom:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:11px;
     color:var(--text-faint);text-transform:uppercase;letter-spacing:.08em;}
@@ -198,12 +230,13 @@
   @media (max-width:900px){.compare-wrap{grid-template-columns:1fr;}}
   .compare{position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;border:1px solid var(--line);
     background:var(--surface);max-width:420px;}
-  .compare .layer{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;}
+  .compare .layer{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:var(--surface-2);}
   .compare .layer.after{clip-path:inset(0 0 0 var(--split,50%));}
-  .compare .layer svg{width:78%;height:92%;}
+  .compare .layer svg{width:86%;height:96%;}
   .compare-tag{position:absolute;top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;
     font-weight:700;letter-spacing:.08em;padding:5px 10px;border-radius:2px;}
-  .compare-tag.before{left:14px;background:rgba(20,23,27,0.85);color:var(--text-muted);border:1px solid var(--line-bright);}
+  .compare-tag.before{left:14px;background:var(--tag-bg);color:var(--text-muted);border:1px solid var(--line-bright);}
   .compare-tag.after{right:14px;background:var(--flame);color:#1A0800;}
   .compare-handle{position:absolute;top:0;bottom:0;left:var(--split,50%);width:2px;background:var(--cyan);
     box-shadow:0 0 12px var(--cyan);transform:translateX(-1px);pointer-events:none;}
@@ -254,3 +287,4 @@
     .print-only table{width:100%;border-collapse:collapse;margin-top:16px;}
     .print-only th,.print-only td{border:1px solid #999;padding:8px;font-size:12px;text-align:left;}
   }
+ 

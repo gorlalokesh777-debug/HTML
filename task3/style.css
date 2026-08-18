@@ -1,7 +1,4 @@
-.hero{
-    
-     background-image: url(https://www.w3schools.com/w3images/architect.jpg) no-repeat center/cover ;
-}
+
 .but button{
      background-color: rgb(235, 35, 35);
      color: aliceblue;
@@ -10,6 +7,19 @@
      text-align: center;
 }
 img{
-     width:auto;
      padding: 12px;
+     width:1330px;
+}
+.but{
+     display:flex;
+     justify-content: end;
+}
+.projects{
+     display:grid ;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     gap: 1em;
+}
+
+.projects img{
+     width: 100%;
 }

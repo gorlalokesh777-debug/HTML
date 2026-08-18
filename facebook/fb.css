@@ -1,6 +1,6 @@
 div{
     padding-top: 200px;
-    padding-right: 10px;
+    padding-left: 600px;
     border-radius: 10px;
     text-align: center;
 
@@ -8,13 +8,14 @@ div{
 
 }
 h1{
-    color: rgb(47, 98, 192);
+    color: rgba(50, 153, 167, 0.664);
 }
+
 body{
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/960px-Facebook_f_logo_%282019%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20231203063624);
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/yB/r/83zWJdc6PJI.webp);
     background-repeat: no-repeat;
-    background-size: 100px;
-    justify-content: center;
+    background-size: 500px;
+    
 }
 .create{
     color: rgb(73, 89, 236);
@@ -22,4 +23,13 @@ body{
     width: 300px;
     height: 50px;
     border-radius: 50px;
+}
+.login{
+    color: rgb(246, 246, 248);
+    background-color: rgb(79, 148, 238) ;
+    width: 100px;
+    border-radius: 10px;
+}
+.mee img{
+    width: 10px;
 }
